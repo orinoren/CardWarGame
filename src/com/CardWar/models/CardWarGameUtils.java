@@ -95,7 +95,7 @@ public class CardWarGameUtils {
                 tieCardsList.add(humanCards.get(this.indexForHuman));
                 tieCardsList.add(computerCards.get(this.indexForComputer));
                 if (humanCards.get(this.indexForHuman).getValue() < computerCards.get(this.indexForComputer).getValue()) {
-                    System.out.println("computer won tie\t\t "  + "h:" + humanCards.get(this.indexForHuman).getValue() + " , c:" + computerCards.get(this.indexForComputer).getValue() + "\n");
+                    System.out.println("computer won tie\t\t " + "h:" + humanCards.get(this.indexForHuman).getValue() + " , c:" + computerCards.get(this.indexForComputer).getValue() + "\n");
                     computerWinningCards.addAll(tieCardsList);
                     isTie = false;
 
@@ -106,9 +106,11 @@ public class CardWarGameUtils {
                 }
             }
 
+            this.indexForHuman++;
+            this.indexForComputer++;
+
         }
-        this.indexForHuman++;
-        this.indexForComputer++;
+
     }
 
     private int checkIfPlayerOutOfCards(List<Card> cards, List<Card> winningCards, int index, String name) {
